@@ -1,0 +1,50 @@
+  113  pgrep -a python3
+  114  pstree -p -s <PID>
+  115  clear
+  116  pgrep -a python3
+  117  pstree -p -s 7516
+  118  ps -o pid,ppid,stat,pri,ni,%cpu,%mem,cmd -p 7516
+  119  clear
+  120  ls -l /proc/7516/task
+  121  ps -L -p 7516 -o pid,tid,ni,pri,stat,comm
+  122  clear
+  123  cat /proc/7516/status | head -n 20
+  124  cat /proc/7516/limits | head -n 15
+  125  cat /proc/7516/cmdline | tr '\0' ' '; echo ""
+  126  ls -l /proc/7516/fd
+  127  clear
+  128  renice -n 10 -p 7516
+  129  ps -o pid,ppid,stat,pri,ni,%cpu,%mem,cmd -p 7516
+  130  kill -STOP 7516
+  131  ps -o pid,stat,cmd -p 7516
+  132  kill -CONT 7516
+  133  ps -o pid,stat,cmd -p 7516
+  134  kill -TERM 7516
+  135  ps -p 7516
+  136  sudo usermod -aG vboxsf $USER
+  137  cp -r ~/trabalho-linux-processos/evidencias /media/sf_transferenciaVM/
+  138  cp -r ~/trabalho-linux-processos /media/sf_transferenciaVM/
+  139  sudo usermod -aG vboxsf $USER
+  140  cp -r ~/trabalho-linux-processos /media/sf_transferenciaVM/
+  141  sudo cp -r ~/trabalho-linux-processos /media/sf_transferenciaVM/
+  142  sudo chmod -R 777 /media/sf_transferenciaVM/trabalho-linux-processos
+  143  cd ~/trabalho-linux-processos
+  144  git commit -m "Analise-processo-linux"
+  145  git config --global user.email"felipegabrelkuhn@gmail.com"
+  146  git config --global user.name "Felipe"
+  147  cd ~/trabalho-linux-processos
+  148  git add .
+  149  git commit -m "analise-processo-linux"
+  150  git config --global user.email "felipegabrelkuhn@gmail.com"
+  151  git config --global user.name "felipegkuhn"
+  152  git commit -m "analise-processo-linux"
+  153  git branch -M main
+  154  git remote add origin https://github.com/felipegkuhn/trabalho-linux-processos.git
+  155  git push -u origin main
+  156  git push -u orign main
+  157  git remote remove origin
+  158  git remote add origin https://github.com/felipegkuhn/trabalho-linux-processos.git
+  159  git push -u origin main
+  160  git push -u origin main --force
+  161  mkdir -p comandos
+  162  history | tail -n 50 > comandos/comandos.txt
